@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SafeTEE first</title>
+  <meta name="description" content="Simple POC of TEE rules editor with ambiguity detection">
+  <meta name="author" content="dmitry.starostin@db.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="js/lib.js"></script>
+  <script type="text/babel" src="js/views.jsx"></script>
+  <script type="text/babel">
+    ReactDOM.render(
+      /*<App rules={[
+        {value: "Oleg", attrs: {FlowType: "SS", ProductType: "Swap"}},
+        {value: "Igor", attrs: {FlowType: "SS", ProductType: "Cash"}},
+        {value: "Ivan", attrs: {FlowType: "SS", ProductType: "Cash", Country: "RU"}},
+        {value: "Syed", attrs: {FlowType: "SS", Country: "IN"}},
+      ]}/>, */
+      <Root />,
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
